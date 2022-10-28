@@ -9,6 +9,13 @@ ROMAN_NUM = {
   'M' => 1000
 }
 
-def roman_to_int(s)
+def roman_to_int(string)
+  sum = 0
 
+  roman_numbers = string.chars
+  roman_numbers.each do |num|
+    sum += ROMAN_NUM[num]
+  end
 end
+
+p roman_to_int('III')
